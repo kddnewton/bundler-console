@@ -3,11 +3,11 @@ require 'bundler/console/version'
 module Bundler
   module Console
     class Command
-      Plugin::API.command('console-temp', self)
+      Plugin::API.command('console', self)
 
       def exec(command, args)
-        if args[:group]
-          Bundler.require(:default, *(args[:group].split.map!(&:to_sym)))
+        if args.any?
+          Bundler.require(:default, *args.map!(&:to_sym))
         else
           Bundler.require
         end
@@ -31,7 +31,7 @@ module Bundler
         const_name = { 'pry'  => :Pry, 'ripl' => :Ripl, 'irb'  => :IRB }[name]
         Object.const_get(const_name)
       rescue NameError
-        Bundler.ui.error "Could not find constant #{const_name}"
+        Bundler.ui.error("Could not find constant #{const_name}")
         exit 1
       end
     end
