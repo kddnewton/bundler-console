@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/kddeisz/bundler-console.svg?branch=master)](https://travis-ci.org/kddeisz/bundler-console)
 
-A bundler plugin that starts an IRB session with your gem dependencies.
+A bundler plugin that starts a console session with your gem dependencies.
 
 ## Installation
 

@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Kevin Deisz']
   spec.email         = ['kevin.deisz@gmail.com']
 
-  spec.summary       = 'A bundler plugin that starts an IRB session with ' \
+  spec.summary       = 'A bundler plugin that starts a console session with ' \
                        'your gem dependencies.'
   spec.homepage      = 'https://github.com/kddeisz/bundler-console'
   spec.license       = 'MIT'
