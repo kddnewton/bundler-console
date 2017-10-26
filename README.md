@@ -1,22 +1,12 @@
 # Bundler::Console
 
+[![Build Status](https://travis-ci.org/kddeisz/bundler-console.svg?branch=master)](https://travis-ci.org/kddeisz/bundler-console)
+
 A bundler plugin that starts an IRB session with your gem dependencies.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'bundler-console'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install bundler-console
+    $ bundle plugin install bundler-console
 
 ## Usage
 
