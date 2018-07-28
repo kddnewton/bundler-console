@@ -5,7 +5,7 @@ module Bundler
     class Command
       Plugin::API.command('console', self)
 
-      def exec(_, args)
+      def exec(_name, args)
         if args.any?
           Bundler.require(:default, *args.map!(&:to_sym))
         else

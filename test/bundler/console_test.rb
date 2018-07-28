@@ -1,7 +1,7 @@
 require 'test_helper'
 
 require 'irb'
-$LOAD_PATH.unshift File.expand_path('../../consoles', __FILE__)
+$LOAD_PATH.unshift File.expand_path('../consoles', __dir__)
 
 class ConsoleTest < Minitest::Test
   class ConsoleDouble
