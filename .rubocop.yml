@@ -1,16 +1,9 @@
 AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.5
   Exclude:
   - 'vendor/**/*'
 
-Naming/FileName:
-  Exclude:
-  - bundler-console.gemspec
-
 Style/Documentation:
-  Enabled: false
-
-Style/FrozenStringLiteralComment:
   Enabled: false
