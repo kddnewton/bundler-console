@@ -18,7 +18,7 @@ GEM
     powerpack (0.1.2)
     rainbow (3.0.0)
     rake (12.3.1)
-    rubocop (0.60.0)
+    rubocop (0.61.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
@@ -44,9 +44,9 @@ DEPENDENCIES
   minitest (~> 5.11)
   net-ssh
   rake (~> 12.3)
-  rubocop (~> 0.58)
+  rubocop (~> 0.61)
   simplecov (~> 0.15)
   tiny_struct
 
 BUNDLED WITH
-   1.16.1
+   1.17.1
