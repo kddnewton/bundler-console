@@ -39,7 +39,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16)
+  bundler (~> 2.0)
   bundler-console!
   minitest (~> 5.11)
   net-ssh
@@ -49,4 +49,4 @@ DEPENDENCIES
   tiny_struct
 
 BUNDLED WITH
-   1.17.2
+   2.0.0
