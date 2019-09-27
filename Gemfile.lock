@@ -16,7 +16,7 @@ GEM
     parser (2.6.3.0)
       ast (~> 2.4.0)
     rainbow (3.0.0)
-    rake (12.3.3)
+    rake (13.0.0)
     rubocop (0.74.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -41,7 +41,7 @@ DEPENDENCIES
   bundler-console!
   minitest (~> 5.11)
   net-ssh
-  rake (~> 12.3)
+  rake (~> 13.0)
   rubocop (~> 0.63)
   simplecov (~> 0.15)
   tiny_struct
