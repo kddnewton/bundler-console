@@ -62,6 +62,8 @@ class ConsoleTest < Minitest::Test
   private
 
   def with_console(name, &block)
-    Bundler.stub(:settings, console: name, &block)
+    Bundler.ui.stub(:error, nil) do
+      Bundler.stub(:settings, console: name, &block)
+    end
   end
 end
