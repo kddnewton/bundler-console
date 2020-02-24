@@ -1,6 +1,7 @@
 # Bundler::Console
 
-[![Build Status](https://travis-ci.com/kddeisz/bundler-console.svg?branch=master)](https://travis-ci.com/kddeisz/bundler-console)
+[![Build Status](https://github.com/kddeisz/bundler-console/workflows/Main/badge.svg)](https://github.com/kddeisz/bundler-console/actions)
+[![Gem](https://img.shields.io/gem/v/bundler-console.svg)](https://rubygems.org/gems/bundler-console)
 
 A bundler plugin that starts a console session with your gem dependencies.
 
