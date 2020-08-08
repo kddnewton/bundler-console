@@ -54,6 +54,8 @@ DEPENDENCIES
   net-ssh
   rake (~> 13.0)
   rb!
+  rubocop (~> 0.89)
+  simplecov (~> 0.17)
   tiny_struct
 
 BUNDLED WITH
