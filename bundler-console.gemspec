@@ -7,8 +7,8 @@ require 'bundler/console/version'
 Gem::Specification.new do |spec|
   spec.name          = 'bundler-console'
   spec.version       = Bundler::Console::VERSION
-  spec.authors       = ['Kevin Deisz']
-  spec.email         = ['kevin.deisz@gmail.com']
+  spec.authors       = ['Kevin Newton']
+  spec.email         = ['kddnewton@gmail.com']
 
   spec.summary       = 'A bundler plugin that starts a console session with ' \
                        'your gem dependencies.'
