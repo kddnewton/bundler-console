@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'A bundler plugin that starts a console session with ' \
                        'your gem dependencies.'
-  spec.homepage      = 'https://github.com/kddeisz/bundler-console'
+  spec.homepage      = 'https://github.com/kddnewton/bundler-console'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
