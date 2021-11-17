@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bundler-console (0.0.2)
+    bundler-console (0.0.3)
 
 GEM
   remote: https://rubygems.org/
