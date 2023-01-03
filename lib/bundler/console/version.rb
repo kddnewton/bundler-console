@@ -2,6 +2,6 @@
 
 module Bundler
   module Console
-    VERSION = '0.0.3'
+    VERSION = "0.0.3"
   end
 end

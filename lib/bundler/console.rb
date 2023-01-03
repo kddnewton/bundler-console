@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'bundler/console/version'
+require "bundler/console/version"
 
 module Bundler
   module Console
     class Command
-      Plugin::API.command('console', self)
+      Plugin::API.command("console", self)
 
       def exec(_name, args)
         if args.any?
@@ -15,7 +15,7 @@ module Bundler
         end
 
         ARGV.clear
-        get_console(Bundler.settings[:console] || 'irb').start
+        get_console(Bundler.settings[:console] || "irb").start
       end
 
       private
@@ -25,12 +25,12 @@ module Bundler
         get_constant(name)
       rescue LoadError
         Bundler.ui.error("Couldn't load console #{name}, falling back to irb")
-        require 'irb'
-        get_constant('irb')
+        require "irb"
+        get_constant("irb")
       end
 
       def get_constant(name)
-        const_name = { 'pry' => :Pry, 'ripl' => :Ripl, 'irb' => :IRB }[name]
+        const_name = { "pry" => :Pry, "ripl" => :Ripl, "irb" => :IRB }[name]
         Object.const_get(const_name)
       rescue NameError
         Bundler.ui.error("Could not find constant #{const_name}")

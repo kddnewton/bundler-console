@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'test_helper'
+require "test_helper"
 
-require 'irb'
-$LOAD_PATH.unshift File.expand_path('../consoles', __dir__)
+require "irb"
+$LOAD_PATH.unshift File.expand_path("../consoles", __dir__)
 
 class ConsoleTest < Minitest::Test
   class ConsoleDouble
@@ -21,14 +21,12 @@ class ConsoleTest < Minitest::Test
   end
 
   def test_start
-    with_console('ripl') { Bundler::Console::Command.new.exec(nil, []) }
+    with_console("ripl") { Bundler::Console::Command.new.exec(nil, []) }
     assert Ripl.started?
   end
 
   def test_start_with_groups
-    IRB.stub(:start, nil) do
-      Bundler::Console::Command.new.exec(nil, %i[foo])
-    end
+    IRB.stub(:start, nil) { Bundler::Console::Command.new.exec(nil, %i[foo]) }
 
     assert Object.const_defined?(:Net)
     refute Object.const_defined?(:Pry)
@@ -37,7 +35,7 @@ class ConsoleTest < Minitest::Test
   def test_failure_to_require
     called = false
 
-    with_console('foobar') do
+    with_console("foobar") do
       IRB.stub(:start, -> { called = true }) do
         Bundler::Console::Command.new.exec(nil, [])
       end
@@ -50,10 +48,8 @@ class ConsoleTest < Minitest::Test
     command = Bundler::Console::Command.new
     console = ConsoleDouble.new
 
-    with_console('pry') do
-      command.stub(:exit, ->(*) { console }) do
-        command.exec(nil, [])
-      end
+    with_console("pry") do
+      command.stub(:exit, ->(*) { console }) { command.exec(nil, []) }
     end
 
     assert console.started?
@@ -62,8 +58,8 @@ class ConsoleTest < Minitest::Test
   private
 
   def with_console(name, &block)
-    Bundler.ui.stub(:error, nil) do
-      Bundler.stub(:settings, { console: name }, &block)
-    end
+    Bundler
+      .ui
+      .stub(:error, nil) { Bundler.stub(:settings, { console: name }, &block) }
   end
 end
