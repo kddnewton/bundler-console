@@ -24,12 +24,17 @@ Gem::Specification.new do |spec|
     "rubygems_mfa_required" => "true"
   }
 
-  spec.files =
-    `git ls-files -z`.split("\x0")
-      .reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files = %w[
+    CHANGELOG.md
+    CODE_OF_CONDUCT.md
+    LICENSE
+    README.md
+    bundler-console.gemspec
+    lib/bundler/console.rb
+    lib/bundler/console/version.rb
+    plugins.rb
+  ]
 
-  spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 2.0"
