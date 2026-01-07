@@ -7,11 +7,14 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.3)
-    docile (1.4.0)
+    docile (1.4.1)
     json (2.18.0)
     language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
-    minitest (5.27.0)
+    logger (1.7.0)
+    minitest (6.0.1)
+      prism (~> 1.5)
+    minitest-mock (5.27.0)
     net-ssh (7.3.0)
     parallel (1.27.0)
     parser (3.3.10.0)
@@ -34,15 +37,15 @@ GEM
       rubocop-ast (>= 1.48.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 4.0)
-    rubocop-ast (1.48.0)
+    rubocop-ast (1.49.0)
       parser (>= 3.3.7.2)
-      prism (~> 1.4)
+      prism (~> 1.7)
     ruby-progressbar (1.13.0)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
-    simplecov-html (0.12.3)
+    simplecov-html (0.13.2)
     simplecov_json_formatter (0.1.4)
     syntax_tree (6.3.0)
       prettier_print (>= 1.2.0)
@@ -55,15 +58,17 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 2.0)
+  bundler
   bundler-console!
-  minitest (~> 5.11)
+  logger
+  minitest
+  minitest-mock
   net-ssh
-  rake (~> 13.0)
-  rubocop (~> 1.12)
-  simplecov (~> 0.19)
+  rake
+  rubocop
+  simplecov
   syntax_tree
   tiny_struct
 
 BUNDLED WITH
-   2.2.3
+   2.5.16

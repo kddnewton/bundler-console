@@ -6,3 +6,4 @@ gemspec
 
 gem "net-ssh", group: :foo
 gem "tiny_struct", group: :bar
+gem "logger"

@@ -37,10 +37,11 @@ Gem::Specification.new do |spec|
 
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "minitest", "~> 5.11"
-  spec.add_development_dependency "rake", "~> 13.0"
-  spec.add_development_dependency "rubocop", "~> 1.12"
-  spec.add_development_dependency "simplecov", "~> 0.19"
+  spec.add_development_dependency "bundler"
+  spec.add_development_dependency "minitest"
+  spec.add_development_dependency "minitest-mock"
+  spec.add_development_dependency "rake"
+  spec.add_development_dependency "rubocop"
+  spec.add_development_dependency "simplecov"
   spec.add_development_dependency "syntax_tree"
 end
