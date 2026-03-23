@@ -25,7 +25,7 @@ GEM
       drb (~> 2.0)
       prism (~> 1.5)
     minitest-mock (5.27.0)
-    net-ssh (7.3.1)
+    net-ssh (7.3.2)
     parallel (1.27.0)
     parser (3.3.10.2)
       ast (~> 2.4.1)
